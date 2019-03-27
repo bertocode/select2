@@ -253,7 +253,9 @@ define([
 
       if (container.isOpen()) {
         self.setClasses();
-        self.highlightFirstItem();
+        if (self.options.get('scrollAfterSelect')) {
+          self.highlightFirstItem();
+        }
       }
     });
 
